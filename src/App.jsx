@@ -1,16 +1,25 @@
-import { Header } from "./components/Header/Header";
-import { Main } from "./components/Main/Main";
-import { Footer } from "./components/Footer/Footer";
-import "./App.css";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Layout } from "./pages/Layout";
+import { Home } from "./pages/Home";
+import { Recipes } from "./pages/Recipes";
+import { About } from "./pages/About";
+import { NoPage } from "./pages/NoPage";
 
-function App() {
+export default function App() {
   return (
-    <div className="app">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="recipes" element={<Recipes />} />
+          <Route path="about" element={<About />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
