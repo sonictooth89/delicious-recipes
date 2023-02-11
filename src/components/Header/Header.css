@@ -1,0 +1,8 @@
+.header {
+    color: red;
+    background-color: #9de423;
+    order: 1;
+    /* flex-grow: 1; */
+    height: 10vh;
+    
+}

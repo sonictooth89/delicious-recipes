@@ -1,0 +1,8 @@
+.main {
+    color: blue;
+    background-color: #ea7b7b;
+    order: 2;
+    /* flex-grow: 4; */
+    height:fit-content;
+    
+}

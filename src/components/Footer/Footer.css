@@ -1,0 +1,8 @@
+.footer {
+    color: yellow;
+    background-color: #6384e7;
+    order: 3;
+    /* flex-grow: 1; */
+    height: 10vh;
+    
+}
